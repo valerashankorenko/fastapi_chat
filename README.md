@@ -54,11 +54,16 @@ python3 -m pip install --upgrade pip
 ```shell
 pip install -r requirements.txt
 ```
-6. Применение миграций
+6. В корневой директории создать файл .env и заполнить своими данными:
+```
+SECRET_KEY=your_secret_key
+ALGORITHM=HS256
+```
+7. Применение миграций
 ```shell
 alembic upgrade head
 ```
-7. Запуск проекта
+8. Запуск проекта
 ```shell
 uvicorn app.main:app
 ```
